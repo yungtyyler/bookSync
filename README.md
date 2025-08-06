@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 BookSync
 
-## Getting Started
+**BookSync** is a collaborative reading tracker app for individuals or families to monitor progress across shared books. Whether you're working through a book club read or reading alongside your partner, BookSync helps everyone stay on track.
 
-First, run the development server:
+---
+
+## Deployment
+
+[https://book-sync-three.vercel.app/](https://book-sync-three.vercel.app/)
+
+---
+
+## 🚀 Features
+
+- 📖 Add books to a shared global library
+- 👤 Track personal reading status per user
+- 🧾 Maintain individual shelves with current progress
+- ✅ Status options: _want to read_, _reading_, _finished_
+- 💡 See who else is reading what and how far along they are
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js (App Router)](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/)
+- [Neon (PostgreSQL)](https://neon.tech/)
+- [Vercel](https://vercel.com/) for deployment
+
+---
+
+## 🧱 Database Schema
+
+Using Prisma, the app uses a normalized schema:
+
+- `User`: name, id
+- `Book`: title, author, total pages
+- `ReadingStatus`: join table that tracks current page, status, and reading progress per user-book combo
+
+---
+
+## 🚧 Coming Soon
+
+- 🔒 Optional user authentication
+- 📊 Reading streak tracking
+- 📱 Mobile-optimized UI
+- 📈 Stats dashboard (pages per day, completion pace)
+
+---
+
+## 📄 Getting Started
+
+### 1. Clone the Repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yungtyyler/booksync.git
+cd booksync
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
