@@ -1,26 +1,27 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@import 'tailwindcss';
+@theme {
+  --color-deep-midnight-blue: oklch(26.59% 0.015 276.13);
+  --color-purple-glow: oklch(68.65% 0.26 300.13);
+  --color-gold-xp: oklch(87.52% 0.19 100.44);
+  --color-light-grey: oklch(88.76% 0.01 104.89);
+  --color-parchment: oklch(95.14% 0.008 94.47);
+  --color-crimson-red: oklch(48.58% 0.17 27.69);
+  --color-rpg-blue: oklch(62.29% 0.19 256.66);
+  --color-orange-exp: oklch(78.03% 0.16 74.45);
+  --color-soft-black: oklch(29.16% 0.006 274.59);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply text-base bg-parchment text-soft-black;
+}
+
+a {
+  @apply text-rpg-blue hover:underline;
+}
+
+input,
+button,
+textarea,
+select {
+  @apply rounded-md border border-light-grey px-3 py-2;
 }
