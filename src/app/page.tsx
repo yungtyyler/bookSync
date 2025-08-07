@@ -1,3 +1,4 @@
+import { MaxWidth } from '@/components/containers';
 import { prisma } from '@/lib/prisma';
 import { Book } from '@prisma/client';
 
@@ -5,7 +6,7 @@ export default async function Home() {
   const books: Book[] = await prisma.book.findMany().then((res) => (res ? res : []));
 
   return (
-    <div>
+    <MaxWidth className="my-8">
       <h1>BookSync</h1>
       <p>Your own online library to share with friends.</p>
       <div>
@@ -24,6 +25,6 @@ export default async function Home() {
           })}
         </ul>
       </div>
-    </div>
+    </MaxWidth>
   );
 }

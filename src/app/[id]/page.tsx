@@ -1,3 +1,4 @@
+import { MaxWidth } from '@/components/containers';
 import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import React from 'react';
@@ -19,7 +20,7 @@ const UserPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { name, readings } = shelf;
 
   return (
-    <div>
+    <MaxWidth className="my-8">
       <h1>{name}&apos;s Shelf</h1>
       <ul>
         {readings.map((reading) => {
@@ -46,7 +47,7 @@ const UserPage = async ({ params }: { params: Promise<{ id: string }> }) => {
           );
         })}
       </ul>
-    </div>
+    </MaxWidth>
   );
 };
 
