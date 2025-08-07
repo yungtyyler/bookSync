@@ -139,9 +139,9 @@ a {
   @apply text-rpg-blue hover:underline;
 }
 
-input,
+/* input,
 button,
 textarea,
 select {
   @apply rounded-md border border-light-grey px-3 py-2;
-}
+} */
